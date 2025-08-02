@@ -16,38 +16,48 @@ public class Activity_1 {
         
         System.out.print("Enter choice: ");
         int choice = sc.nextInt();
-        int attemp = 3;
         
         switch(choice){
             case 1:
        
                 BankingClass bc = new BankingClass();
-               
+               int attemp = 0;
                 
                 
-                System.out.print("Enter your Account No: ");
-                int accountNo = sc.nextInt();
+               while (attemp < 3) {
+                    System.out.print("Enter your Account No: ");
+                    int accountNo = sc.nextInt();
 
-                System.out.print("Enter your Pin: ");
-                int pin = sc.nextInt();
-              
-                while(attemp == 0){
-                    if (bc.verifyAccount(accountNo, pin)){
+                    System.out.print("Enter your Pin: ");
+                    int pin = sc.nextInt();
+
+                    if (bc.verifyAccount(accountNo, pin)) {
                         System.out.println("LOGIN SUCCESS");
-                    } 
+                        break;
+                    } else {
+                        attemp++;
+                        if (attemp < 3) {
+                            System.out.println("Incorrect account number or PIN. Attempt " + attemp + " of 3.");
+                        } else {
+                            System.out.println("Maximum attempts reached. Exiting system...");
+                            System.exit(0);
+                        }
+                    }
                 }
                 break;
+
             case 2:
-                
+                System.out.println("Doctor appointment feature is under construction.");
                 break;
+
             case 3:
-                
+                System.out.println("Shopping feature is under construction.");
                 break;
+
             default:
                 System.out.println("Invalid Selection!");
-        
         }
-    }    
-    
-    
+
+        sc.close();
+    }
 }
