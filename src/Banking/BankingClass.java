@@ -6,7 +6,7 @@ public class BankingClass {
     private float balance;
     private int pin;
 
-    // Getters
+   
     public float getBalance() {
         return balance;
     }
@@ -19,7 +19,7 @@ public class BankingClass {
         return accNo;
     }
 
-    // Setters
+  
     public void setBalance(float balance) {
         this.balance = balance;
     }
@@ -32,12 +32,12 @@ public class BankingClass {
         this.accNo = accNo;
     }
 
-    // Verify account details
+   
     public boolean verifyAccount(int accn, int pin) {
         return (this.accNo == accn && this.pin == pin);
     }
 
-    // Deposit money
+ 
     public void deposit(float amount) {
         if (amount > 0) {
             balance += amount;
@@ -47,7 +47,7 @@ public class BankingClass {
         }
     }
 
-    // Withdraw money
+  
     public void withdraw(float amount) {
         if (amount > 0 && amount <= balance) {
             balance -= amount;

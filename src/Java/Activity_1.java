@@ -18,7 +18,6 @@ public class Activity_1 {
 
         System.out.print("Enter choice: ");
         int choice = sc.nextInt();
-<<<<<<< HEAD
 
         switch (choice) {
             case 1:
@@ -139,7 +138,6 @@ public class Activity_1 {
 
             case 2:
                
-=======
         
         switch(choice){
             case 1:
@@ -163,7 +161,7 @@ public class Activity_1 {
                         if (attemp < 3) {
                             System.out.println("Incorrect account number or PIN. Attempt " + attemp + " of 3.");
                         } else {
-                            System.out.println("Maximum attempts reached. Exiting system...");
+                            System.out.println("Maximum attempts reached.");
                             System.exit(0);
                         }
                     }
@@ -171,26 +169,18 @@ public class Activity_1 {
                 break;
 
             case 2:
-                System.out.println("Doctor appointment feature is under construction.");
->>>>>>> e0296e1c52f749106162efd15b53cda279e1ff45
+     
                 break;
 
             case 3:
-                System.out.println("Shopping feature is under construction.");
+                
                 break;
 
             default:
-<<<<<<< HEAD
                 System.out.println("Invalid selection");
-=======
-                System.out.println("Invalid Selection!");
->>>>>>> e0296e1c52f749106162efd15b53cda279e1ff45
         }
 
         sc.close();
     }
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> e0296e1c52f749106162efd15b53cda279e1ff45
